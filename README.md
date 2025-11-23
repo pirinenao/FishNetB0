@@ -2,6 +2,9 @@
 
 An image classification model based on Google's EfficientNetB0, trained on a custom dataset of over 6,000 images of common finnish fish species. Lightweight size (approximately 17MB) makes it suitable for web and mobile applications.
 
+Access the web demo [here](https://pirinenao.github.io/FishNetB0/).
+
+
 ## Training Method
 
 The model was trained using a two-phase transfer learning approach.
@@ -61,7 +64,7 @@ python predict.py your_test_img.jpg
 ## Conversion to TensorFlow.js
 
 The model was converted to the TensorFlow.js format for the web demo by using the tensorflowjs_converter (python 3.11.8).
-If you don't want to convert the model, you can copy the content of demo/web_model_ouput and start building with the model.
+If you don't want to convert the model, you can copy the content of docs/web_model_ouput and start building with the model.
 
 ```bash
 tensorflowjs_converter --input_format=keras --output_format=tfjs_graph_model fishnetb0.keras ./web_model_output
