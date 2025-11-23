@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishNetB0 demo</title>
+    <style>
+        body {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #image-preview {
+            max-width: 100%;
+            max-height: 500px;
+            display: block;
+            margin: 20px auto;
+        }
+        table {
+            margin: 20px auto;
+        }
+        #result {
+            margin: 20px 0;
+        }
+    </style>
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+</head>
+<body>
+    <h1>FishNetB0 demo</h1>
+    <p>FishNetB0 is a lightweight, EfficientNetB0-based image classification model designed to identify common Finnish fish species. 
+        <br> Available species: Ahven, Harjus, Hauki, Kiiski, Kirjolohi, Kuha, Lahna, Lohi, Made, Pasuri, Särki, Säyne, Siika, Taimen
+        <br> Model runs directly in your browser, and no data is sent to the server.</p>
+    
+
+    <div class="container">
+        <input type="file" id="image-upload" accept="image/*"><br><br>
+        <div id="upload-status">Loading model...</div>
+        
+        <div>
+            <img id="image-preview" alt="Preview" style="display: none;">
+        </div>
+
+        <div id="status"></div>
+        <h2 id="result"></h2>
+        <div id="all-probabilities"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
